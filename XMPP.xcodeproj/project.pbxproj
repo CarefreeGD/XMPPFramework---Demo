@@ -15,6 +15,8 @@
 		601051EC1D5C5D1B00CEDAD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 601051EA1D5C5D1B00CEDAD6 /* LaunchScreen.storyboard */; };
 		601051F71D5C5D1B00CEDAD6 /* XMPPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 601051F61D5C5D1B00CEDAD6 /* XMPPTests.m */; };
 		601052021D5C5D1B00CEDAD6 /* XMPPUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 601052011D5C5D1B00CEDAD6 /* XMPPUITests.m */; };
+		601052111D5C5D5F00CEDAD6 /* XMPPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 601052101D5C5D5F00CEDAD6 /* XMPPManager.m */; };
+		DE3836ED195D52829368340E /* libPods-XMPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4EC63E635A21DF32DA9CFE4 /* libPods-XMPP.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,11 @@
 		601051FD1D5C5D1B00CEDAD6 /* XMPPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XMPPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		601052011D5C5D1B00CEDAD6 /* XMPPUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMPPUITests.m; sourceTree = "<group>"; };
 		601052031D5C5D1B00CEDAD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6010520F1D5C5D5F00CEDAD6 /* XMPPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPManager.h; sourceTree = "<group>"; };
+		601052101D5C5D5F00CEDAD6 /* XMPPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPManager.m; sourceTree = "<group>"; };
+		7909208F850D1F983DB1F9D6 /* Pods-XMPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XMPP/Pods-XMPP.debug.xcconfig"; sourceTree = "<group>"; };
+		A4EC63E635A21DF32DA9CFE4 /* libPods-XMPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XMPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B072C4A6D8ED0B2514A0C34A /* Pods-XMPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-XMPP/Pods-XMPP.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE3836ED195D52829368340E /* libPods-XMPP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		564EBB07FC0625B4502BF1D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7909208F850D1F983DB1F9D6 /* Pods-XMPP.debug.xcconfig */,
+				B072C4A6D8ED0B2514A0C34A /* Pods-XMPP.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		601051D01D5C5D1A00CEDAD6 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +102,8 @@
 				601051F51D5C5D1B00CEDAD6 /* XMPPTests */,
 				601052001D5C5D1B00CEDAD6 /* XMPPUITests */,
 				601051DA1D5C5D1A00CEDAD6 /* Products */,
+				564EBB07FC0625B4502BF1D1 /* Pods */,
+				BCE44BA53D588D9ED1969CC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +122,8 @@
 			children = (
 				601051DF1D5C5D1B00CEDAD6 /* AppDelegate.h */,
 				601051E01D5C5D1B00CEDAD6 /* AppDelegate.m */,
+				6010520F1D5C5D5F00CEDAD6 /* XMPPManager.h */,
+				601052101D5C5D5F00CEDAD6 /* XMPPManager.m */,
 				601051E21D5C5D1B00CEDAD6 /* ViewController.h */,
 				601051E31D5C5D1B00CEDAD6 /* ViewController.m */,
 				601051E51D5C5D1B00CEDAD6 /* Main.storyboard */,
@@ -140,6 +161,14 @@
 			path = XMPPUITests;
 			sourceTree = "<group>";
 		};
+		BCE44BA53D588D9ED1969CC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4EC63E635A21DF32DA9CFE4 /* libPods-XMPP.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 601052061D5C5D1B00CEDAD6 /* Build configuration list for PBXNativeTarget "XMPP" */;
 			buildPhases = (
+				09A7DA299B1D44510FCBDC35 /* [CP] Check Pods Manifest.lock */,
 				601051D51D5C5D1A00CEDAD6 /* Sources */,
 				601051D61D5C5D1A00CEDAD6 /* Frameworks */,
 				601051D71D5C5D1A00CEDAD6 /* Resources */,
+				E77855B68E77224DFD61C77D /* [CP] Embed Pods Frameworks */,
+				F5F45FF1E09FC039B9F91575 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,11 +297,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09A7DA299B1D44510FCBDC35 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E77855B68E77224DFD61C77D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMPP/Pods-XMPP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5F45FF1E09FC039B9F91575 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMPP/Pods-XMPP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		601051D51D5C5D1A00CEDAD6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				601052111D5C5D5F00CEDAD6 /* XMPPManager.m in Sources */,
 				601051E41D5C5D1B00CEDAD6 /* ViewController.m in Sources */,
 				601051E11D5C5D1B00CEDAD6 /* AppDelegate.m in Sources */,
 				601051DE1D5C5D1B00CEDAD6 /* main.m in Sources */,
@@ -413,6 +494,7 @@
 		};
 		601052071D5C5D1B00CEDAD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7909208F850D1F983DB1F9D6 /* Pods-XMPP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = XMPP/Info.plist;
@@ -424,6 +506,7 @@
 		};
 		601052081D5C5D1B00CEDAD6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B072C4A6D8ED0B2514A0C34A /* Pods-XMPP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = XMPP/Info.plist;
@@ -498,6 +581,7 @@
 				601052081D5C5D1B00CEDAD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		601052091D5C5D1B00CEDAD6 /* Build configuration list for PBXNativeTarget "XMPPTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +590,7 @@
 				6010520B1D5C5D1B00CEDAD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6010520C1D5C5D1B00CEDAD6 /* Build configuration list for PBXNativeTarget "XMPPUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +599,7 @@
 				6010520E1D5C5D1B00CEDAD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
